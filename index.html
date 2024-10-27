@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор времени выполнения кода</title>
+    <style></style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Калькулятор времени выполнения кода</h1>
+      <div class="code-input">
+        <textarea id="code" placeholder="Введите ваш код здесь..."></textarea>
+        <div class="controls">
+          <select id="language">
+            <option value="java">Java</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="cpp">C++</option>
+            <option value="csharp">C#</option>
+            <option value="go">Go</option>
+            <option value="ruby">Ruby</option>
+            <option value="rust">Rust</option>
+            <option value="swift">Swift</option>
+            <option value="typescript">TypeScript</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="scala">Scala</option>
+            <option value="php">PHP</option>
+            <option value="r">R</option>
+            <option value="perl">Perl</option>
+          </select>
+          <button class="btn-run" id="run">Выполнить</button>
+        </div>
+      </div>
+      <div id="output"></div>
+      <div id="results">
+        <div id="executionTime"></div>
+        <canvas id="chart"></canvas>
+      </div>
+      <div id="history">
+        <h3>История выполнения</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
